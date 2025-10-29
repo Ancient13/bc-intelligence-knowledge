@@ -10,7 +10,7 @@ related_topics:
   - "git-layer-configuration.md"
 applies_to:
   - "BC Code Intelligence MCP Server"
-last_updated: "2025-10-27"
+last_updated: "2025-10-29"
 ---
 
 # Configuration File Formats and Creation
@@ -81,11 +81,10 @@ enable_diagnostic_tools: true
       "type": "git",
       "priority": 20,
       "source": {
-        "repository_url": "https://github.com/mycompany/bc-knowledge",
+        "repository_url": "https://dev.azure.com/myorg/BC-Knowledge/_git/standards",
         "branch": "main",
         "auth": {
-          "type": "pat",
-          "token_env_var": "GITHUB_TOKEN"
+          "type": "az_cli"
         }
       },
       "enabled": true
@@ -101,15 +100,14 @@ knowledge_layers:
     type: git
     priority: 20
     source:
-      repository_url: "https://github.com/mycompany/bc-knowledge"
+      repository_url: "https://dev.azure.com/myorg/BC-Knowledge/_git/standards"
       branch: main
       auth:
-        type: pat
-        token_env_var: GITHUB_TOKEN
+        type: az_cli
     enabled: true
 ```
 
-**What this does:** Adds a company knowledge layer from GitHub with PAT authentication.
+**What this does:** Adds a company knowledge layer from Azure DevOps with Azure CLI authentication (preferred method).
 
 ### **Example 3: Full Multi-Layer Setup**
 
@@ -125,8 +123,7 @@ knowledge_layers:
         "repository_url": "https://dev.azure.com/myorg/BC-Knowledge/_git/standards",
         "branch": "main",
         "auth": {
-          "type": "pat",
-          "token_env_var": "AZURE_DEVOPS_PAT"
+          "type": "az_cli"
         }
       },
       "enabled": true
@@ -139,8 +136,7 @@ knowledge_layers:
         "repository_url": "https://dev.azure.com/myorg/BC-Knowledge/_git/team-alpha",
         "branch": "main",
         "auth": {
-          "type": "pat",
-          "token_env_var": "AZURE_DEVOPS_PAT"
+          "type": "az_cli"
         }
       },
       "enabled": true
@@ -169,8 +165,7 @@ knowledge_layers:
       repository_url: "https://dev.azure.com/myorg/BC-Knowledge/_git/standards"
       branch: main
       auth:
-        type: pat
-        token_env_var: AZURE_DEVOPS_PAT
+        type: az_cli
     enabled: true
 
   - name: "Team Conventions"
@@ -180,8 +175,7 @@ knowledge_layers:
       repository_url: "https://dev.azure.com/myorg/BC-Knowledge/_git/team-alpha"
       branch: main
       auth:
-        type: pat
-        token_env_var: AZURE_DEVOPS_PAT
+        type: az_cli
     enabled: true
 
   - name: "Project Overrides"
@@ -194,7 +188,7 @@ knowledge_layers:
 enable_diagnostic_tools: true
 ```
 
-**What this does:** Complete organization setup with company, team, and project layers.
+**What this does:** Complete organization setup with company, team, and project layers using Azure CLI authentication.
 
 ## Configuration Schema Reference
 
@@ -224,8 +218,12 @@ enable_diagnostic_tools: true
   "branch": string,             // Git branch (default: "main")
   "subdirectory"?: string,      // Optional subdirectory path
   "auth": {
-    "type": "pat",              // Authentication type (currently only "pat")
-    "token_env_var": string     // Environment variable containing PAT token
+    // Option 1: Azure CLI (recommended for Azure DevOps)
+    "type": "az_cli"
+    
+    // Option 2: PAT token (fallback or for GitHub)
+    // "type": "pat",
+    // "token_env_var": string   // Environment variable containing PAT token
   }
 }
 ```
@@ -251,29 +249,64 @@ enable_diagnostic_tools: true
 
 ## Authentication Configuration
 
-### **GitHub PAT Token**
+### **Azure DevOps Authentication** ⭐ **Recommended**
 
-1. **Generate token:** https://github.com/settings/tokens
-   - Permissions: `repo` (for private repos) or no permissions (public repos)
+#### **Option 1: Azure CLI (Preferred)**
 
-2. **Set environment variable:**
+**Why prefer Azure CLI:**
+- ✅ No token expiration management
+- ✅ Works with MFA and conditional access policies
+- ✅ Single sign-on via `az login`
+- ✅ Simpler than PAT management
+
+**Setup:**
+
+1. **Install Azure CLI:** https://aka.ms/install-az-cli
+
+2. **Login to Azure:**
    ```bash
-   # Windows PowerShell
-   $env:GITHUB_TOKEN = "ghp_your_token_here"
-   
-   # Linux/macOS
-   export GITHUB_TOKEN="ghp_your_token_here"
+   az login
    ```
 
-3. **Reference in config:**
+3. **Configure in JSON:**
    ```json
    "auth": {
-     "type": "pat",
-     "token_env_var": "GITHUB_TOKEN"
+     "type": "az_cli"
    }
    ```
 
-### **Azure DevOps PAT Token**
+4. **Configure in YAML:**
+   ```yaml
+   auth:
+     type: az_cli
+   ```
+
+**Full example:**
+```json
+{
+  "knowledge_layers": [
+    {
+      "name": "Company Standards",
+      "type": "git",
+      "priority": 20,
+      "source": {
+        "repository_url": "https://dev.azure.com/myorg/BC-Knowledge/_git/standards",
+        "branch": "main",
+        "auth": {
+          "type": "az_cli"
+        }
+      },
+      "enabled": true
+    }
+  ]
+}
+```
+
+**How it works:** Git credential manager automatically uses your Azure CLI session for authentication. No manual token handling required!
+
+#### **Option 2: Azure DevOps PAT Token (Fallback)**
+
+Use when Azure CLI is not available or when automation requires static credentials.
 
 1. **Generate token:** Azure DevOps → User Settings → Personal Access Tokens
    - Scopes: `Code (Read)`
@@ -292,6 +325,30 @@ enable_diagnostic_tools: true
    "auth": {
      "type": "pat",
      "token_env_var": "AZURE_DEVOPS_PAT"
+   }
+   ```
+
+### **GitHub Authentication**
+
+#### **GitHub PAT Token**
+
+1. **Generate token:** https://github.com/settings/tokens
+   - Permissions: `repo` (for private repos) or no permissions (public repos)
+
+2. **Set environment variable:**
+   ```bash
+   # Windows PowerShell
+   $env:GITHUB_TOKEN = "ghp_your_token_here"
+   
+   # Linux/macOS
+   export GITHUB_TOKEN="ghp_your_token_here"
+   ```
+
+3. **Reference in config:**
+   ```json
+   "auth": {
+     "type": "pat",
+     "token_env_var": "GITHUB_TOKEN"
    }
    ```
 
@@ -340,11 +397,10 @@ $config = @{
             type = "git"
             priority = 20
             source = @{
-                repository_url = "https://github.com/mycompany/bc-knowledge"
+                repository_url = "https://dev.azure.com/myorg/BC-Knowledge/_git/standards"
                 branch = "main"
                 auth = @{
-                    type = "pat"
-                    token_env_var = "GITHUB_TOKEN"
+                    type = "az_cli"
                 }
             }
             enabled = $true
@@ -366,11 +422,10 @@ cat > bc-code-intel-config.json << 'EOF'
       "type": "git",
       "priority": 20,
       "source": {
-        "repository_url": "https://github.com/mycompany/bc-knowledge",
+        "repository_url": "https://dev.azure.com/myorg/BC-Knowledge/_git/standards",
         "branch": "main",
         "auth": {
-          "type": "pat",
-          "token_env_var": "GITHUB_TOKEN"
+          "type": "az_cli"
         }
       },
       "enabled": true
