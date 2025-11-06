@@ -1,6 +1,6 @@
 ---
 title: "SIFT Technology Fundamentals"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["sift", "performance", "caching", "optimization", "streaming"]

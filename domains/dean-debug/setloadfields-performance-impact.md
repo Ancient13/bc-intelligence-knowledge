@@ -1,6 +1,6 @@
 ---
 title: "SetLoadFields Partial Loading Performance Impact"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["performance", "memory-optimization", "data-loading", "setloadfields"]

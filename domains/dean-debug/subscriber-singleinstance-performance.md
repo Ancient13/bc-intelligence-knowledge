@@ -1,6 +1,6 @@
 ---
 title: "SingleInstance Subscriber Performance Impact"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["events", "singleinstance", "memory", "performance"]

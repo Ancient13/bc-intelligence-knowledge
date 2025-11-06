@@ -1,6 +1,6 @@
 ---
 title: "Telemetry Verbosity Strategy"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "beginner"
 bc_versions: "14+"
 tags: ["telemetry", "verbosity", "production", "diagnostics"]

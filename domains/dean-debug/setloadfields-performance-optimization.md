@@ -1,6 +1,6 @@
 ---
 title: "AL SetLoadFields Performance Optimization"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["performance", "setloadfields", "optimization", "memory", "data-access"]

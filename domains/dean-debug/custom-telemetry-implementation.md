@@ -1,6 +1,6 @@
 ---
 title: "Custom Telemetry Implementation in AL"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["telemetry", "session-logmessage", "privacy", "diagnostics", "monitoring"]

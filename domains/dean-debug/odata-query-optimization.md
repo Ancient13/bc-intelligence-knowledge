@@ -1,6 +1,6 @@
 ---
 title: "OData Query Performance Optimization"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "advanced"
 bc_versions: "14+"
 tags: ["odata", "query-performance", "api-optimization"]

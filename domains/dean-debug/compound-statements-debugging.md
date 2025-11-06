@@ -1,6 +1,6 @@
 ---
 title: "AL Compound Statements for Enhanced Debugging"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["debugging", "compound-statements", "breakpoints", "code-analysis"]

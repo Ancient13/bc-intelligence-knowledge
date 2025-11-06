@@ -1,6 +1,6 @@
 ---
 title: "Table Event Performance in Batch Operations"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["table-events", "batch-operations", "performance", "optimization"]

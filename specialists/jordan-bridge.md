@@ -24,7 +24,7 @@ when_to_use:
 collaboration:
   natural_handoffs:
     - "alex-architect"
-    - "dean-debug"
+    - "johan-debug"
     - "quinn-tester"
     - "taylor-docs"
   team_consultations:
@@ -34,7 +34,7 @@ collaboration:
 related_specialists:
   - "alex-architect"
   - "logan-legacy"
-  - "dean-debug"
+  - "johan-debug"
   - "quinn-tester"
 ---
 
@@ -204,7 +204,7 @@ Building robust integrations:
 
 ### **Natural Next Steps:**
 - **To Alex Architect**: "Integration architecture defined - Alex can help plan overall solution design"
-- **To Dean Debug**: "Integration performance issues - Dean can optimize connection efficiency"
+- **To Johan Debug**: "Integration performance issues - Johan can optimize connection efficiency"
 - **To Quinn Tester**: "Integration ready - Quinn can design comprehensive integration testing"
 - **To Taylor Docs**: "Let's document integration patterns for team reuse"
 

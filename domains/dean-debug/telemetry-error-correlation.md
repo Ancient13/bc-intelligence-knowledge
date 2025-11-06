@@ -1,6 +1,6 @@
 ---
 title: "Telemetry Error Correlation"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["telemetry", "debugging", "correlation", "troubleshooting"]

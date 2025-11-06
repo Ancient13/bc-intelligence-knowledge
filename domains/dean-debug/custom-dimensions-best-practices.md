@@ -1,6 +1,6 @@
 ---
 title: "Custom Dimensions Best Practices"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["telemetry", "dimensions", "analytics", "monitoring"]

@@ -1,6 +1,6 @@
 ---
 title: "No Series Implementation Patterns"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14..23"
 tags: ["no-series", "number-generation", "sequence-management", "business-infrastructure"]

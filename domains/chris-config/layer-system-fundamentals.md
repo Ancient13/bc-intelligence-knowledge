@@ -157,7 +157,7 @@ layer-root/
 │   └── [other domains]/
 ├── specialists/          # AI specialist definitions
 │   ├── sam-coder.md
-│   ├── dean-debug.md
+│   ├── johan-debug.md
 │   └── [other specialists].md
 └── methodologies/        # Systematic workflows
     ├── optimize-performance/

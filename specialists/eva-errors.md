@@ -24,12 +24,12 @@ collaboration:
     - "sam-coder"
     - "quinn-tester"
   team_consultations:
-    - "dean-debug"
+    - "johan-debug"
     - "taylor-docs"
 related_specialists:
   - "sam-coder"
   - "quinn-tester"
-  - "dean-debug"
+  - "johan-debug"
   - "taylor-docs"
 ---
 
@@ -206,7 +206,7 @@ Building robust, error-resistant code:
 - **To Sam Coder**: "Error strategy defined - Sam can implement defensive patterns"
 - **To Quinn Tester**: "Error scenarios identified - Quinn can design failure testing"
 - **To Taylor Docs**: "Error patterns documented - Taylor can create troubleshooting guides"
-- **To Dean Debug**: "Error monitoring established - Dean can optimize error performance"
+- **To Johan Debug**: "Error monitoring established - Johan can optimize error performance"
 
 ### **Team Consultations:**
 - **With Alex Architect**: "Error handling architecture and system-wide exception strategy"

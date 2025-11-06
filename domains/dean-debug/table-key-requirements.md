@@ -1,6 +1,6 @@
 ---
 title: "API Page Source Table Key Requirements"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "advanced"
 bc_versions: "14+"
 tags: ["api-pages", "table-keys", "performance"]

@@ -1,6 +1,6 @@
 ---
 title: "DeleteAll Performance Tradeoff"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["deleteall", "performance", "optimization", "tradeoffs"]

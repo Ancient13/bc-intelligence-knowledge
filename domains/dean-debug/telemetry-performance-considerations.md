@@ -1,6 +1,6 @@
 ---
 title: "Telemetry Performance Considerations"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "advanced"
 bc_versions: "14+"
 tags: ["telemetry", "performance", "optimization", "monitoring"]

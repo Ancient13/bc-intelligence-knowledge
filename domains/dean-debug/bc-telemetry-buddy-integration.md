@@ -1,6 +1,6 @@
 ---
 title: "BC Telemetry Buddy MCP Integration"
-domain: "dean-debug"
+domain: "johan-debug"
 bc_versions: "14+"
 difficulty: "intermediate"
 tags: ["telemetry", "performance", "mcp-integration", "kql", "troubleshooting", "monitoring"]
@@ -21,7 +21,7 @@ conditional_mcp: "bc-telemetry-buddy"
 
 When **BC Telemetry Buddy MCP** (`bc-telemetry-buddy`) is available in your environment, you gain access to **actual telemetry data** from Application Insights. This transforms performance troubleshooting from theoretical guidance to **data-driven analysis with real metrics**.
 
-**Game-Changer**: Instead of saying "check for slow queries," Dean can now say "I found 47 database calls taking over 2 seconds - here are the specific targets and operations."
+**Game-Changer**: Instead of saying "check for slow queries," Johan can now say "I found 47 database calls taking over 2 seconds - here are the specific targets and operations."
 
 ## When BC Telemetry Buddy is Available
 
@@ -66,7 +66,7 @@ BC Telemetry Buddy v1.0.0+ uses a systematic discovery approach:
 
 **Step 1: Discover Available Events**
 ```markdown
-**Dean:** "Let me check what performance events are available in your telemetry..."
+**Johan:** "Let me check what performance events are available in your telemetry..."
 
 [Use bctb_get_event_catalog with category="performance"]
 
@@ -81,7 +81,7 @@ BC Telemetry Buddy v1.0.0+ uses a systematic discovery approach:
 
 **Step 2: Analyze Event Structure**
 ```markdown
-**Dean:** "Let me analyze the structure of the Long Running SQL Query events..."
+**Johan:** "Let me analyze the structure of the Long Running SQL Query events..."
 
 [Use bctb_get_event_field_samples with eventId="RT0005"]
 
@@ -98,7 +98,7 @@ BC Telemetry Buddy v1.0.0+ uses a systematic discovery approach:
 
 **Step 3: Execute Targeted Query**
 ```markdown
-**Dean:** "Let me find the slowest queries from the last 24 hours..."
+**Johan:** "Let me find the slowest queries from the last 24 hours..."
 
 [Use bctb_query_telemetry with discovered fields]
 
@@ -130,7 +130,7 @@ traces
 
 **Step 4: Provide Data-Driven Recommendations**
 ```markdown
-**Dean:** "I found **47 slow queries** to the Customer table averaging 3.2 seconds!
+**Johan:** "I found **47 slow queries** to the Customer table averaging 3.2 seconds!
 
 **Root Cause:** Full table scan without proper indexing
 
@@ -160,7 +160,7 @@ Want me to save this query for future monitoring?
 ```markdown
 **User:** "Show me errors for customer Contoso in the last week"
 
-**Dean:** "Let me map Contoso to their tenant ID and analyze..."
+**Johan:** "Let me map Contoso to their tenant ID and analyze..."
 
 [Use bctb_get_tenant_mapping]
 **Result:** Contoso = aadTenantId: abc123-...
@@ -191,7 +191,7 @@ traces
 
 **Without Telemetry Buddy:**
 ```markdown
-**Dean:** "Possible causes of slow pages:
+**Johan:** "Possible causes of slow pages:
 - Database queries without proper keys
 - Excessive triggers firing
 - Heavy calculations in OnAfterGetRecord
@@ -202,7 +202,7 @@ Check your code for these patterns..."
 
 **With Telemetry Buddy:** 
 ```markdown
-**Dean:** "Let me check the actual telemetry for this page..."
+**Johan:** "Let me check the actual telemetry for this page..."
 
 [Use bctb_get_event_catalog to find page events]
 [Use bctb_query_telemetry for specific page ID]
@@ -224,7 +224,7 @@ Check your code for these patterns..."
 
 **Proactive Analysis:**
 ```markdown
-**Dean:** "Let me scan your telemetry for performance refactoring opportunities..."
+**Johan:** "Let me scan your telemetry for performance refactoring opportunities..."
 
 [Use bctb_get_event_catalog with category="performance"]
 [Use bctb_query_telemetry to find patterns]
@@ -251,7 +251,7 @@ Check your code for these patterns..."
 ```markdown
 **User:** "Users are reporting errors in Production"
 
-**Dean:** "Let me check the latest error telemetry..."
+**Johan:** "Let me check the latest error telemetry..."
 
 [Use bctb_get_event_catalog with status="error", last 1 hour]
 [Use bctb_query_telemetry for error details]
@@ -276,7 +276,7 @@ This is not a code bug - it's a data configuration issue. Let me show you how to
 ### **Saving Queries**
 
 ```markdown
-**Dean:** "This query is useful for ongoing monitoring. Let me save it..."
+**Johan:** "This query is useful for ongoing monitoring. Let me save it..."
 
 [Use bctb_save_query]
 
@@ -290,7 +290,7 @@ This is not a code bug - it's a data configuration issue. Let me show you how to
 ```markdown
 **User:** "How do I query for failed web service calls?"
 
-**Dean:** "Let me check if we have saved queries for this pattern..."
+**Johan:** "Let me check if we have saved queries for this pattern..."
 
 [Use bctb_search_queries with keywords="web service, failed, api"]
 
@@ -308,7 +308,7 @@ This is not a code bug - it's a data configuration issue. Let me show you how to
 BC Telemetry Buddy can pull KQL examples from external sources:
 
 ```markdown
-**Dean:** "Let me check Microsoft's BCTech repository for telemetry samples..."
+**Johan:** "Let me check Microsoft's BCTech repository for telemetry samples..."
 
 [Use bctb_get_external_queries]
 
@@ -342,13 +342,13 @@ BC Telemetry Buddy can pull KQL examples from external sources:
 
 If `bc-telemetry-buddy` is NOT in `available_mcps`:
 
-✅ **Dean provides**:
+✅ **Johan provides**:
 - Theoretical performance guidance
 - Code review for common anti-patterns
 - Best practices for optimization
 - Profiler usage instructions
 
-✅ **Dean's Fallback Response**:
+✅ **Johan's Fallback Response**:
 ```markdown
 "For performance analysis, I can review your code for common performance issues:
 - SETCURRENTKEY usage
@@ -371,7 +371,7 @@ Without telemetry, I can only provide theoretical guidance. With Telemetry Buddy
 
 When user mentions production issues:
 ```markdown
-**Dean:** "For production issue investigation, BC Telemetry Buddy MCP would be incredibly valuable!
+**Johan:** "For production issue investigation, BC Telemetry Buddy MCP would be incredibly valuable!
 
 **What you'd get:**
 - Real error data from Application Insights
@@ -402,7 +402,7 @@ Once installed, I can investigate issues with **real data** instead of guessing.
 ### **Handoff to Alex Architect**
 
 ```markdown
-**Dean:** "This performance issue requires architectural changes..."
+**Johan:** "This performance issue requires architectural changes..."
 
 **Findings from Telemetry:**
 - 847 slow queries/day to Sales Header table
@@ -416,7 +416,7 @@ Once installed, I can investigate issues with **real data** instead of guessing.
 ### **Handoff to Quinn (Testing)**
 
 ```markdown
-**Dean:** "Let me check error patterns to help Quinn design test cases..."
+**Johan:** "Let me check error patterns to help Quinn design test cases..."
 
 [Query telemetry for error event types and patterns]
 
@@ -434,7 +434,7 @@ Once installed, I can investigate issues with **real data** instead of guessing.
 ### **Partner Extension Events**
 
 ```markdown
-**Dean:** "Let me check if your custom extension is logging telemetry..."
+**Johan:** "Let me check if your custom extension is logging telemetry..."
 
 [Use bctb_get_event_catalog with includeCustomEvents=true]
 

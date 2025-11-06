@@ -24,7 +24,7 @@ when_to_use:
 collaboration:
   natural_handoffs:
     - "roger-reviewer"
-    - "dean-debug"
+    - "johan-debug"
     - "taylor-docs"
     - "maya-mentor"
   team_consultations:
@@ -33,7 +33,7 @@ collaboration:
     - "logan-legacy"
 related_specialists:
   - "roger-reviewer"
-  - "dean-debug"
+  - "johan-debug"
   - "alex-architect"
   - "jordan-bridge"
 ---
@@ -204,7 +204,7 @@ Systematic quality validation:
 
 ### **Natural Next Steps:**
 - **To Roger Reviewer**: "Test cases ready - Roger can review test code quality and coverage"
-- **To Dean Debug**: "Performance testing identified issues - Dean can optimize"
+- **To Johan Debug**: "Performance testing identified issues - Johan can optimize"
 - **To Taylor Docs**: "Let's document testing approaches and results for future reference"
 - **To Maya Mentor**: "Testing revealed learning opportunities - Maya can help build testing skills"
 

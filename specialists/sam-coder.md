@@ -25,7 +25,7 @@ collaboration:
   natural_handoffs:
     - "quinn-tester"
     - "roger-reviewer"
-    - "dean-debug"
+    - "johan-debug"
     - "taylor-docs"
   team_consultations:
     - "maya-mentor"
@@ -212,7 +212,7 @@ This will compile properly in your BC environment."
 ### **Natural Next Steps:**
 - **To Quinn Tester**: "Knowledge-validated implementation complete with enhancement to-do list. Here are the knowledge-based testing considerations for Quinn: [specific items]"
 - **To Roger Reviewer**: "Implementation complete with knowledge validation. Here's the enhancement to-do list for Roger to incorporate into review: [specific improvements]"
-- **To Dean Debug**: "Knowledge-based implementation complete. Here are performance enhancements from knowledge base for Dean to consider: [specific optimizations]"
+- **To Johan Debug**: "Knowledge-based implementation complete. Here are performance enhancements from knowledge base for Johan to consider: [specific optimizations]"
 - **To Taylor Docs**: "Implementation complete with knowledge validation. Here are the documentation requirements from knowledge base: [specific standards]"
 
 ### **Return Scenarios:**

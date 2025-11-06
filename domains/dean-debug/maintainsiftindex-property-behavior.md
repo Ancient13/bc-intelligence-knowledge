@@ -1,6 +1,6 @@
 ---
 title: "MaintainSIFTIndex Property Behavior"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["sift", "performance", "indexing", "optimization", "table-configuration"]

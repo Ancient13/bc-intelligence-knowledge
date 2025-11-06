@@ -28,12 +28,12 @@ collaboration:
     - "sam-coder"
     - "taylor-docs"
   team_consultations:
-    - "dean-debug"
+    - "johan-debug"
     - "logan-legacy"
     - "alex-architect"
 related_specialists:
   - "quinn-tester"
-  - "dean-debug"
+  - "johan-debug"
   - "maya-mentor"
   - "logan-legacy"
 ---
@@ -208,7 +208,7 @@ Actionable quality enhancement:
 - **To Taylor Docs**: "Let's document these quality patterns for team reference"
 
 ### **Team Consultations:**
-- **With Dean Debug**: "Performance-related quality issues requiring optimization"
+- **With Johan Debug**: "Performance-related quality issues requiring optimization"
 - **With Logan Legacy**: "Quality assessment of inherited code requiring improvement"
 - **With Alex Architect**: "Architectural quality concerns requiring design review"
 

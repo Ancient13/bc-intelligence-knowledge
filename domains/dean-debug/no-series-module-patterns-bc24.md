@@ -1,6 +1,6 @@
 ---
 title: "No. Series Module Patterns (BC24+)"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "24+"
 tags: ["no-series", "number-generation", "business-foundation", "module-architecture", "bc24-migration"]

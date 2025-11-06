@@ -1,6 +1,6 @@
 ---
 title: "No. Series Validation Module Patterns (BC24+)"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "24+"
 tags: ["no-series-validation", "business-foundation", "module-validation", "bc24-migration", "data-integrity"]

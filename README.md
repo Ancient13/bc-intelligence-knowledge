@@ -12,7 +12,7 @@ Pure knowledge content repository for Business Central best practices, methodolo
 Complete roster of 14 BC development specialists:
 - **Alex Architect** - Strategic Planning & Architecture
 - **Casey Copilot** - AI-Enhanced Development Coach  
-- **Dean Debug** - Performance & Troubleshooting
+- **Johan Debug** - Performance & Troubleshooting
 - **Eva Errors** - Error Handling & Exception Management
 - **Jordan Bridge** - Systems Connection & Event-Driven Design
 - **Logan Legacy** - Legacy Code & Version Migration

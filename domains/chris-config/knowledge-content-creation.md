@@ -137,7 +137,7 @@ domain: "deployment"       # Release management
 
 # Specialist domains
 domain: "alex-architect"    # Architecture and design
-domain: "dean-debug"       # Performance and debugging
+domain: "johan-debug"       # Performance and debugging
 domain: "sam-coder"        # Implementation patterns
 domain: "chris-config"     # Configuration and customization
 ```

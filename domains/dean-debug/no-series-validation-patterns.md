@@ -1,6 +1,6 @@
 ---
 title: "No Series Validation Patterns"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14..23"
 tags: ["no-series-validation", "data-validation", "integrity-checking", "error-prevention"]

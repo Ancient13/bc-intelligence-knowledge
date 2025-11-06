@@ -1,6 +1,6 @@
 ---
 title: "DeleteAll SQL Translation and Performance Impact"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["deleteall", "sql-translation", "performance-optimization"]

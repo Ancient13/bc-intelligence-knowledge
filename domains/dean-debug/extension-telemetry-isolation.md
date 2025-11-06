@@ -1,6 +1,6 @@
 ---
 title: "Extension Telemetry Isolation"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["telemetry", "extensions", "isolation", "multi-tenancy"]

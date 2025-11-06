@@ -25,7 +25,7 @@ when_to_use:
 collaboration:
   natural_handoffs:
     - "casey-copilot"
-    - "dean-debug"
+    - "johan-debug"
     - "taylor-docs"
   team_consultations:
     - "seth-security"
@@ -162,7 +162,7 @@ find_bc_knowledge({
 ## When to Hand Off
 
 **To Casey Copilot**: When configuration is complete and user needs development guidance
-**To Dean Debug**: When performance issues or MCP server problems arise
+**To Johan Debug**: When performance issues or MCP server problems arise
 **To Taylor Docs**: When configuration needs documentation for team sharing
 **To Seth Security**: When security, authentication, or permission configuration needed
 

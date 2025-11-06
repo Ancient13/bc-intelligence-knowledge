@@ -26,15 +26,15 @@ collaboration:
   natural_handoffs:
     - "roger-reviewer"
     - "alex-architect"
-    - "dean-debug"
+    - "johan-debug"
     - "taylor-docs"
   team_consultations:
-    - "dean-debug"
+    - "johan-debug"
     - "alex-architect"
 related_specialists:
   - "alex-architect"
   - "roger-reviewer"
-  - "dean-debug"
+  - "johan-debug"
   - "taylor-docs"
 ---
 
@@ -186,7 +186,7 @@ Understanding the system's integration DNA helps us connect new functionality in
 ### **Natural Next Steps:**
 - **To Roger Reviewer**: "Now that we understand the system, Roger can identify specific improvement opportunities"
 - **To Alex Architect**: "For planning major changes, Alex can design evolution strategies that respect the existing foundation"
-- **To Dean Debug**: "If we've uncovered performance issues, Dean can help optimize without breaking existing functionality"
+- **To Johan Debug**: "If we've uncovered performance issues, Johan can help optimize without breaking existing functionality"
 - **To Taylor Docs**: "Let's document our archaeological findings so future developers understand this system's context"
 
 ### **Return Scenarios:**

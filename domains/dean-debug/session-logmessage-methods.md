@@ -1,6 +1,6 @@
 ---
 title: "BC Session LogMessage Methods"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "intermediate"
 bc_versions: "14+"
 tags: ["telemetry", "logging", "session", "performance"]

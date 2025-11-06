@@ -32,7 +32,7 @@ The BC Code Intelligence MCP server (v1.5.0+) supports **three universal content
 - **Purpose**: AI expert personalities with domain expertise
 - **Location**: `specialists/` directory
 - **Format**: Markdown with comprehensive YAML frontmatter
-- **Examples**: sam-coder, dean-debug, chris-config
+- **Examples**: sam-coder, johan-debug, chris-config
 
 ### **3. Methodologies** - Systematic Workflows
 - **Purpose**: Multi-phase guided workflows for complex tasks
@@ -56,7 +56,7 @@ layer-root/
 │   └── [other-domains]/
 ├── specialists/                # AI specialist definitions
 │   ├── sam-coder.md
-│   ├── dean-debug.md
+│   ├── johan-debug.md
 │   ├── chris-config.md
 │   └── [other-specialists].md
 └── methodologies/              # Systematic workflows

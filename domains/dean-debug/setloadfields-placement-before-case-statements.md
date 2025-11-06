@@ -1,6 +1,6 @@
 ---
 title: "SetLoadFields Placement Before Case Statements"
-domain: "dean-debug"
+domain: "johan-debug"
 difficulty: "advanced"
 bc_versions: "14+"
 tags: ["setloadfields", "case-statements", "conditional-logic", "advanced"]
