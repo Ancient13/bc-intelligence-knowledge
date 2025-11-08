@@ -1,5 +1,9 @@
 # BC Code Intelligence Knowledge Base
 
+> **Forked from**: [JeremyVyska/bc-code-intelligence](https://github.com/JeremyVyska/bc-code-intelligence)  
+> **Original Author**: Jeremy Vyska  
+> **This Fork**: Modified version with customizations by Ancient13
+
 Pure knowledge content repository for Business Central best practices, methodologies, and domain expertise.
 
 ## Structure
